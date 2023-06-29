@@ -18,6 +18,8 @@ function App() {
   };
 
   const checkAndAdapt = () => {
+    console.log("launched");
+
     if (switch1 && switch2 && switch3) {
       const switchToChange = getRadomSwitchExeptOne(lastChanged);
 
@@ -55,7 +57,7 @@ function App() {
     }
   };
 
-  checkAndAdapt();
+  //checkAndAdapt();
 
   return (
     <>
@@ -108,8 +110,7 @@ function App() {
           id="fast"
           checked={switch1}
           onChange={() => {
-            setSwitch1(!switch1);
-            setLastChanged(1);
+            setLastChanged(1, setSwitch1(!switch1, checkAndAdapt()));
           }}
         />
         <label className="red" htmlFor="fast">
@@ -121,8 +122,7 @@ function App() {
           id="good"
           checked={switch2}
           onChange={() => {
-            setSwitch2(!switch2);
-            setLastChanged(2);
+            setLastChanged(2, setSwitch2(!switch2, checkAndAdapt()));
           }}
         />
         <label className="green" htmlFor="good">
@@ -134,8 +134,7 @@ function App() {
           id="cheap"
           checked={switch3}
           onChange={() => {
-            setSwitch3(!switch3);
-            setLastChanged(3);
+            setLastChanged(3, setSwitch3(!switch3, checkAndAdapt()));
           }}
         />
         <label className="blue" htmlFor="cheap">
