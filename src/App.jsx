@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "./App.css";
 
@@ -18,8 +18,6 @@ function App() {
   };
 
   const checkAndAdapt = () => {
-    console.log("launched");
-
     if (switch1 && switch2 && switch3) {
       const switchToChange = getRadomSwitchExeptOne(lastChanged);
 
@@ -56,8 +54,25 @@ function App() {
       // }
     }
   };
+  useEffect(() => {
+    if (switch1 && switch2 && switch3) {
+      const switchToChange = getRadomSwitchExeptOne(lastChanged);
 
-  //checkAndAdapt();
+      switch (switchToChange) {
+        case 1:
+          setSwitch1(false);
+          break;
+        case 2:
+          setSwitch2(false);
+          break;
+        case 3:
+          setSwitch3(false);
+          break;
+        default:
+          break;
+      }
+    }
+  }, [lastChanged]);
 
   return (
     <>
@@ -110,7 +125,8 @@ function App() {
           id="fast"
           checked={switch1}
           onChange={() => {
-            setLastChanged(1, setSwitch1(!switch1, checkAndAdapt()));
+            setLastChanged(1);
+            setSwitch1(!switch1);
           }}
         />
         <label className="red" htmlFor="fast">
@@ -122,7 +138,8 @@ function App() {
           id="good"
           checked={switch2}
           onChange={() => {
-            setLastChanged(2, setSwitch2(!switch2, checkAndAdapt()));
+            setSwitch2(!switch2);
+            setLastChanged(2);
           }}
         />
         <label className="green" htmlFor="good">
@@ -134,7 +151,8 @@ function App() {
           id="cheap"
           checked={switch3}
           onChange={() => {
-            setLastChanged(3, setSwitch3(!switch3, checkAndAdapt()));
+            setSwitch3(!switch3);
+            setLastChanged(3);
           }}
         />
         <label className="blue" htmlFor="cheap">
