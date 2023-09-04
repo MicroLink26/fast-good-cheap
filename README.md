@@ -5,7 +5,7 @@
 		src="https://github.com/MicroLink26/fast-good-cheap/blob/main/preview/logo.png">
 </h1>
 <h3 align="center">
-	Marvel characters & comics - React
+	Fast, Good, Cheap - React
 </h3>
 
 <p align="center">
