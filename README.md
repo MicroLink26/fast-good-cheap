@@ -2,7 +2,7 @@
 <img
 		width="250"
 		alt="Fast Good Cheap"
-		src="https://github.com/MicroLink26/fast-good-cheap/blob/main/logo.png">
+		src="https://github.com/MicroLink26/fast-good-cheap/blob/main/Capture d’écran 2023-09-04 à 11.52.47.png">
 </h1>
 <h3 align="center">
 	Fast, Good, Cheap - React
