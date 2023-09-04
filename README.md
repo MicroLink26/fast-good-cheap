@@ -14,10 +14,8 @@
 	<img alt="Star" src="https://img.shields.io/badge/you%20like%20%3F-STAR%20ME-blue.svg?style=flat-square">
 </p>
 
-<p align="center">
-	<img src="https://github.com/MicroLink26/fast-good-cheap/blob/main/preview/preview.png" width="300">
-</p>
 
 
-Fast Good Cheap
+
+Fast Good Cheap on netlify: 
 https://scintillating-custard-44c0e0.netlify.app/
