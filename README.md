@@ -1,7 +1,7 @@
 <h1 align="center">
 <img
 		width="250"
-		alt="Marvel - React"
+		alt="Fast Good Cheap"
 		src="https://github.com/MicroLink26/fast-good-cheap/blob/main/preview/logo.png">
 </h1>
 <h3 align="center">
